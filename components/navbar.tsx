@@ -39,6 +39,15 @@ export function Navbar() {
             </Link>
             <div className="hidden md:flex items-center gap-6">
               <Link
+                href="/"
+                className={cn(
+                  "text-sm font-medium transition-colors hover:text-primary",
+                  isActive("/") ? "text-primary" : "text-muted-foreground"
+                )}
+              >
+                Inicio
+              </Link>
+              <Link
                 href="/catalog"
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-primary",
@@ -57,13 +66,13 @@ export function Navbar() {
                 Artistas
               </Link>
               <Link
-                href="/about"
+                href="/contact"
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-primary",
-                  isActive("/about") ? "text-primary" : "text-muted-foreground"
+                  isActive("/contact") ? "text-primary" : "text-muted-foreground"
                 )}
               >
-                Nosotros
+                Contacto
               </Link>
             </div>
           </div>
